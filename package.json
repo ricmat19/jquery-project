@@ -1,0 +1,27 @@
+{
+  "name": "jquery-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "config.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ricmat19/jquery-project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ricmat19/jquery-project/issues"
+  },
+  "homepage": "https://github.com/ricmat19/jquery-project#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "jquery": "^3.6.0",
+    "requirejs": "^2.3.6"
+  }
+}
