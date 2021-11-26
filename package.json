@@ -2,10 +2,7 @@
   "name": "jquery-project",
   "version": "1.0.0",
   "description": "",
-  "main": "config.js",
-  "directories": {
-    "lib": "lib"
-  },
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,7 +18,6 @@
   "homepage": "https://github.com/ricmat19/jquery-project#readme",
   "dependencies": {
     "dotenv": "^10.0.0",
-    "jquery": "^3.6.0",
-    "requirejs": "^2.3.6"
+    "express": "^4.17.1"
   }
 }
