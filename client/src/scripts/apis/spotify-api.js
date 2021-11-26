@@ -1,10 +1,8 @@
-define(['jquery'], function($) {
+    import $ from 'jquery';
 
-    const SPOTIFY_AUTH_TOKEN = process.env.SPOTIFY_AUTH_TOKEN;
+    const BASE_URL = 'https://api.spotify.com/v1'; 
 
-    const BASE_URL = 'https://api.spotify.com/v1';
-
-    return {
+    export default{
         //Get categories from Spotify API
         getCategories: function() {
             return new Promise((resolve, reject) => {
@@ -12,7 +10,7 @@ define(['jquery'], function($) {
                     url: BASE_URL + '/browse/categories',
                     method: 'GET',
                     headers: {
-                        Authorization: 'Bearer ' + AUTH_TOKEN
+                        Authorization: 'Bearer ' + process.env.SPOTIFY_AUTH_TOKEN
                     },
                     success: (data, status) => {
                         console.log('getCategories: ', data);
@@ -30,4 +28,3 @@ define(['jquery'], function($) {
             
         },
     }    
-})

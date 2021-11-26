@@ -1,15 +1,13 @@
-define(['jquery'], function($) {
-
-    const COMIC_VINE_API_KEY = process.env.COMIC_VINE_API_KEY;
+    import $ from 'jquery';
 
     const BASE_URL = 'http://comicvine.gamespot.com/api';
 
-    return {
+    export default{
         //Get categories from Spotify API
         getSeries: function() {
             return new Promise((resolve, reject) => {
                 $.ajax({
-                    url: `/series?api_key=${COMIC_VINE_API_KEY}`,
+                    url: `/series?api_key=${process.env.COMIC_VINE_API_KEY}`,
                     method: 'GET',
                     success: (data, status) => {
                         console.log('getSeries: ', data);
@@ -26,5 +24,4 @@ define(['jquery'], function($) {
             })
             
         },
-    }    
-})
+    }

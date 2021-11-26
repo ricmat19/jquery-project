@@ -1,18 +1,20 @@
+const path = require("path");
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const dotenv = require('dotenv-webpack')
 
 module.exports = {
-    entry: './src/main.js',
+    entry: './src/scripts/index.js',
     output: {
-        filename: 'bundle.js'
+        filename: 'bundle.js',
+        path: path.resolve(__dirname, "dist")
     },
-    devtool: 'source-maps',
+    // devtool: 'eval-source-map',
     module: {
         rules: [
             { 
                 test: /\.js?$/, 
-                loader: 'bable-loader', 
+                loader: 'babel-loader', 
                 exclude: /node_modules/
             },
             { 
@@ -35,12 +37,12 @@ module.exports = {
         ]
     },
     devServer: {
-        contentBase: 'src',
+        static: 'src',
         hot: true,
         open: true,
-        port: 3001,
-        watchContenBase: true
+        port: 3001
     },
+    // target: 'node',
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
         new HtmlWebpackPlugin({
